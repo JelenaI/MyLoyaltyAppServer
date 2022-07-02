@@ -18,7 +18,8 @@ class UserService(private val userRepository: UserRepository) {
             firstName = user.firstName,
             lastName = user.lastName,
             phoneNumber = user.phoneNumber,
-            email = user.email
+            email = user.email,
+            points = user.points
         )
     }
 
@@ -38,7 +39,8 @@ class UserService(private val userRepository: UserRepository) {
                 password = request.password,
                 firstName = request.firstName,
                 lastName = request.lastName,
-                phoneNumber = request.phoneNumber
+                phoneNumber = request.phoneNumber,
+                points = emptyList()
             )
         )
     }
