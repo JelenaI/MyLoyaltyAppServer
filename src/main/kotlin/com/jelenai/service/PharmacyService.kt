@@ -11,6 +11,7 @@ class PharmacyService(private val pharmacyRepository: PharmacyRepository) {
         pharmacyRepository.createPharmacy(
             Pharmacy(
                 name = request.name,
+                loyaltyDescription = request.loyaltyDescription,
                 branches = request.branches
             )
         )
@@ -21,6 +22,7 @@ class PharmacyService(private val pharmacyRepository: PharmacyRepository) {
         return PharmacyResponse(
             id = pharmacy.id,
             name = pharmacy.name,
+            loyaltyDescription = pharmacy.loyaltyDescription,
             branches = pharmacy.branches
         )
     }
@@ -34,6 +36,7 @@ class PharmacyService(private val pharmacyRepository: PharmacyRepository) {
                 PharmacyResponse(
                     id = pharmacy.id,
                     name = pharmacy.name,
+                    loyaltyDescription = pharmacy.loyaltyDescription,
                     branches = pharmacy.branches
                 )
             )

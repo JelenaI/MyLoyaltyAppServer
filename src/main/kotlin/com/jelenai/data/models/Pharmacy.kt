@@ -6,6 +6,7 @@ import kotlinx.serialization.Serializable
 data class Pharmacy(
     val id: String? = null,
     val name: String,
+    val loyaltyDescription: String,
     val branches: List<Branch>
 )
 
