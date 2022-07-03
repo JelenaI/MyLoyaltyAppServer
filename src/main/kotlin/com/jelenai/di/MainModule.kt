@@ -1,7 +1,10 @@
 package com.jelenai.di
 
+import com.jelenai.data.repository.pharmacy.PharmacyRepository
+import com.jelenai.data.repository.pharmacy.PharmacyRepositoryImpl
 import com.jelenai.data.repository.user.UserRepository
 import com.jelenai.data.repository.user.UserRepositoryImpl
+import com.jelenai.service.PharmacyService
 import com.jelenai.service.UserService
 import com.jelenai.util.Constants
 import org.koin.dsl.module
@@ -18,5 +21,11 @@ val mainModule = module {
     }
     single {
         UserService(get())
+    }
+    single<PharmacyRepository> {
+        PharmacyRepositoryImpl(get())
+    }
+    single {
+        PharmacyService(get())
     }
 }

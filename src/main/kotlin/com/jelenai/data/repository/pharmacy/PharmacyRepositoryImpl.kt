@@ -13,4 +13,8 @@ class PharmacyRepositoryImpl(db: CoroutineDatabase) : PharmacyRepository {
     override suspend fun getPharmacyById(id: String): Pharmacy? {
         return pharmacies.findOneById(id)
     }
+
+    override suspend fun getAllPharmacies(): List<Pharmacy> {
+        return pharmacies.find().toList()
+    }
 }

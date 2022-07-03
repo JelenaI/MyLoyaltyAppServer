@@ -1,6 +1,7 @@
 package com.jelenai.plugins
 
 import com.jelenai.routes.*
+import com.jelenai.service.PharmacyService
 import com.jelenai.service.UserService
 import com.jelenai.util.Constants.JWT_AUDIENCE
 import com.jelenai.util.Constants.JWT_ISSUER
@@ -12,6 +13,7 @@ import org.koin.ktor.ext.inject
 
 fun Application.configureRouting() {
     val userService: UserService by inject()
+    val pharmacyService: PharmacyService by inject()
 
     routing {
         // User routes
@@ -27,7 +29,7 @@ fun Application.configureRouting() {
         getUserByEmail(userService)
 
         // Pharmacy routes
-        pharmacyRouting()
+        pharmacyRouting(pharmacyService)
 
         // Static resources
         static("/static") {

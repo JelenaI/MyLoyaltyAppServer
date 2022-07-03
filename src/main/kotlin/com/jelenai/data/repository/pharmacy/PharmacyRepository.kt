@@ -6,4 +6,6 @@ interface PharmacyRepository {
     suspend fun createPharmacy(pharmacy: Pharmacy)
 
     suspend fun getPharmacyById(id: String): Pharmacy?
+
+    suspend fun getAllPharmacies(): List<Pharmacy>
 }

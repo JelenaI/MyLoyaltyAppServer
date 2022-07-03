@@ -53,16 +53,6 @@ class UserService(private val userRepository: UserRepository) {
         return ValidationEvent.Success
     }
 
-//    fun getAllUsers(): List<ProfileResponse> {
-//        val result: List<ProfileResponse> = mutableListOf()
-//        val users = userRepository.getAllUsers()
-//
-//        for (user in users) {
-//            result.
-//        }
-//        return userRepository.getAllUsers()
-//    }
-
     sealed class ValidationEvent {
         object ErrorFieldEmpty : ValidationEvent()
         object Success : ValidationEvent()
