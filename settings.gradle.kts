@@ -1,1 +1,1 @@
-rootProject.name = "com.example.myloyaltyappserver"
+rootProject.name = "com.jelenai.myloyaltyappserver"
