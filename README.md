@@ -3,7 +3,7 @@ MyLoyaltyAppServer je back-end aplikacija napravljena u sklopu master rada na te
 
 Za back-end je koristi aplikacija MyLoyaltyApp čiji kod je dostupan na: https://github.com/JelenaI/MyLoyaltyApp
 
-Ova aplikacija vodi računa o bazi MongoDb u kojoj se čuvaju podaci o apotekama i korisnicima. Primer jednog elementa kollekcije korisnika je: 
+Ova aplikacija vodi računa o bazi MongoDb u kojoj se čuvaju podaci o apotekama i korisnicima. Primer jednog elementa kolekcije korisnika je: 
 ```json
 {
     "_id" : "62c028ec23a16a7d01ad2b12",
